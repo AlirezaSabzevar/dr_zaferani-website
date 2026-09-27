@@ -1,0 +1,37 @@
+.articlesPage{
+
+    padding-bottom:var(--section-space);
+
+    background:#F8FBFF;
+
+}
+
+.articlesPage__grid{
+
+    display:grid;
+
+    gap:24px;
+
+    margin-top:48px;
+
+}
+
+@media(min-width:768px){
+
+    .articlesPage__grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(min-width:1200px){
+
+    .articlesPage__grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}

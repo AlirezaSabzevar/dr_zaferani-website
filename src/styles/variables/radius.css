@@ -1,0 +1,11 @@
+:root{
+
+    /* ========= Radius ========= */
+
+    --radius-sm:8px;
+    --radius-md:14px;
+    --radius-lg:18px;
+    --radius-xl:28px;
+    --radius-round:999px;
+
+}

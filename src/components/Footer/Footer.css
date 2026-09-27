@@ -1,0 +1,153 @@
+/* ==========================================
+   Footer
+========================================== */
+
+.footer{
+
+    background:#0F3B82;
+
+    color:#fff;
+
+    padding-top:72px;
+
+    margin-top:80px;
+
+}
+.footer__grid{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:48px;
+
+}
+.footer__column__sec1,
+.footer__column__sec2,
+.footer__column__sec3,
+.footer__column__sec4{
+
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    gap:18px;
+
+}
+.footer__socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 25px;
+}
+.footer__column__sec2 h4,
+.footer__column__sec3 h4,
+.footer__column__sec4 h4{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin:0;
+
+}
+.footer__column__sec1 p{
+
+    color:rgba(255,255,255,.85);
+
+    line-height:1.9;
+
+}
+.footer__column__sec1 span,
+.footer__column__sec4 span{
+
+    color:rgba(255,255,255,.75);
+
+    line-height:1.8;
+
+}
+.footer__logo{
+
+    /* width:72px; */
+    object-fit:contain;
+    border-radius: var(--radius-xl);
+    margin: auto;
+    width: 350px;
+    height: 350px;
+
+}
+.footer__column__sec2 ul,
+.footer__column__sec3 ul,
+.footer__column__sec4 ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+.footer__column__sec1 a,
+.footer__column__sec2 a{
+
+    text-decoration:none;
+
+    color:rgba(255,255,255,.85);
+
+    transition:var(--transition);
+
+}
+.footer__column__sec1 a:hover,
+.footer__column__sec2 a:hover{
+
+    color:white;
+
+    padding-right:8px;
+
+}
+.footer__contact li{
+
+    display:flex;
+    justify-content: center;
+    align-items:flex-start;
+    gap:12px;
+    line-height:1.8;
+}
+.footer__contact svg{
+
+    color:white;
+
+    flex-shrink:0;
+
+    margin-top:4px;
+
+    font-size:18px;
+
+}
+.footer__bottom{
+
+    margin-top:56px;
+
+    padding:24px 0;
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    text-align:center;
+
+}
+.footer__bottom p{
+
+    margin:0;
+
+    color:rgba(255,255,255,.75);
+
+    font-size:15px;
+
+}

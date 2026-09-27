@@ -1,0 +1,201 @@
+.mobileMenu{
+
+    position:fixed;
+
+    top:0;
+
+    right:0;
+
+    width:300px;
+
+    max-width:82%;
+
+    height:100vh;
+
+    background:white;
+
+    z-index:999;
+
+    transform:translateX(100%);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:24px;
+
+}
+.mobileMenu.open{
+
+transform:translateX(0);
+
+}
+.mobileMenu__header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+}
+
+.mobileMenu__brand img{
+
+    width:100px;
+
+    aspect-ratio:1;
+
+    object-fit:contain;
+
+}
+
+.mobileMenu__close{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+width:42px;
+
+aspect-ratio:1;
+
+border:none;
+
+border-radius:50%;
+
+background:var(--primary-light);
+
+color:var(--primary);
+
+transition:var(--transition);
+
+cursor:pointer;
+
+}
+.mobileMenu__close:hover{
+
+background:var(--primary);
+
+color:white;
+
+transform:rotate(90deg);
+
+}
+
+.mobileMenu__nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    margin:15px 0;
+
+}
+.mobileMenu__link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px 18px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    font-size:var(--fs-16);
+
+    font-weight:var(--fw-600);
+
+    transition:var(--transition);
+
+}
+.mobileMenu__link:hover{
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    transform:translateX(-6px);
+
+}
+.mobileMenu__icon{
+
+    font-size:22px;
+
+    color:var(--primary);
+
+    flex-shrink:0;
+
+}
+
+.mobileMenu__badge{
+
+    margin-right:auto;
+
+    padding:4px 10px;
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    line-height:1;
+
+}
+
+.mobileMenu__divider{
+
+height:1px;
+
+background:#ECECEC;
+
+margin:8px 0 24px;
+
+}
+
+.mobileMenu .btn{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.mobileMenu__icon{
+
+    font-size:20px;
+
+    color:var(--primary);
+
+    flex-shrink:0;
+
+}
+
+.mobileMenu__appointment{
+
+    display:block;
+
+    width:100%;
+
+    text-decoration:none;
+
+}

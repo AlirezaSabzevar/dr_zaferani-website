@@ -1,0 +1,219 @@
+.pageHeader{
+
+    background:white;
+
+    border-bottom:1px solid #ECECEC;
+
+    padding:26px 0 46px;
+
+}
+
+.pageHeader__top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:24px;
+
+    margin-bottom:52px;
+
+}
+
+.pageHeader__brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    text-decoration:none;
+
+}
+
+.pageHeader__brand img{
+
+    width:58px;
+
+    height:58px;
+
+    object-fit:contain;
+
+}
+
+.pageHeader__brand h3{
+
+    margin:0;
+
+    color:var(--text);
+
+    font-size:20px;
+
+}
+
+.pageHeader__brand span{
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+}
+
+.pageHeader__back{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.pageHeader__back:hover{
+
+    transform:translateX(6px);
+
+}
+
+.pageHeader__content{
+
+    text-align:center;
+
+    max-width:720px;
+
+    margin-inline:auto;
+
+}
+
+.pageHeader__content h1{
+
+    font-size:clamp(34px,4vw,52px);
+
+    margin-bottom:18px;
+
+    color:var(--text);
+
+}
+
+.pageHeader__content p{
+
+    color:var(--text-light);
+
+    line-height:2;
+
+}
+
+
+/* ===========================
+        Breadcrumb
+=========================== */
+
+.breadcrumb{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-bottom:28px;
+
+    flex-wrap:wrap;
+
+}
+
+.breadcrumb__item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+}
+
+.breadcrumb__item a{
+
+    text-decoration:none;
+
+    color:var(--primary);
+
+    transition:.3s;
+
+}
+
+.breadcrumb__item a:hover{
+
+    opacity:.7;
+
+}
+
+.breadcrumb__item svg{
+
+    font-size:16px;
+
+    color:#A8A8A8;
+
+}
+
+
+
+
+
+
+
+@media(max-width:768px){
+
+    .pageHeader{
+
+        padding:22px 0 34px;
+
+    }
+
+    .pageHeader__top{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        margin-bottom:34px;
+
+    }
+
+    .pageHeader__brand img{
+
+        width:48px;
+
+        height:48px;
+
+    }
+
+    .pageHeader__content{
+
+        text-align:right;
+
+    }
+    .breadcrumb{
+
+    justify-content:flex-start;
+
+    }
+
+}

@@ -1,0 +1,19 @@
+.card{
+
+    background:var(--white);
+
+    border-radius:var(--radius-xl);
+
+    box-shadow:var(--shadow-md);
+
+    overflow:hidden;
+
+    transition:var(--transition);
+}
+
+.card--hover:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-lg);
+}

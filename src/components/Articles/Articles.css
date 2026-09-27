@@ -1,0 +1,693 @@
+/* =========================================
+   Articles Section
+========================================= */
+
+.articles{
+
+    padding-top: var(--space-48);
+
+    /* padding-block: var(--section-space); */
+
+    background: #F8FBFF;
+
+    overflow: hidden;
+
+}
+
+.articles .container{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+/* =========================================
+   Featured Article
+========================================= */
+
+.featuredArticle{
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    background:var(--white);
+
+    border-radius:var(--radius-xl);
+
+    box-shadow:var(--shadow-md);
+
+    transition:var(--transition);
+
+}
+
+.featuredArticle:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+
+
+/* =========================================
+   Featured Image
+========================================= */
+
+.featuredArticle__image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    aspect-ratio:16/10;
+
+}
+
+.featuredArticle__image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s;
+
+}
+
+.featuredArticle:hover .featuredArticle__image img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/* =========================================
+   Featured Content
+========================================= */
+
+.featuredArticle__content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    padding:28px;
+
+}
+
+
+
+/* =========================================
+   Featured Badge
+========================================= */
+
+.featuredArticle__badge{
+
+    width:fit-content;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+
+
+/* =========================================
+   Featured Title
+========================================= */
+
+.featuredArticle__content h2{
+
+    margin:0;
+
+    color:var(--text);
+
+    font-size:25px;
+
+    line-height:1.5;
+
+}
+
+
+
+/* =========================================
+   Featured Description
+========================================= */
+
+.featuredArticle__content p{
+
+    margin:0;
+
+    color:var(--text-light);
+
+    line-height:2;
+
+}
+
+
+
+/* =========================================
+   Featured Meta
+========================================= */
+
+.featuredArticle__meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.featuredArticle__meta span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+}
+
+.featuredArticle__meta svg{
+
+    color:var(--primary);
+
+}
+
+
+
+/* =========================================
+   Featured Button
+========================================= */
+
+.featuredArticle .btn{
+
+    width:fit-content;
+
+}
+
+/* =========================================
+   Articles Grid
+========================================= */
+
+.articles__grid{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:24px;
+
+    margin-top:40px;
+
+}
+
+
+
+/* =========================================
+   Article Card
+========================================= */
+
+.articleCard{
+
+    overflow:hidden;
+
+    border-radius:var(--radius-xl);
+
+    background:var(--white);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.articleCard:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+
+
+/* =========================================
+   Article Image
+========================================= */
+
+.articleCard__image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    aspect-ratio:16/10;
+
+}
+
+.articleCard__image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s;
+
+}
+
+.articleCard:hover .articleCard__image img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/* =========================================
+   Category Badge
+========================================= */
+
+.articleCard__category{
+
+    position:absolute;
+
+    top:16px;
+
+    right:16px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(10px);
+
+    color:var(--primary);
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+
+
+/* =========================================
+   Content
+========================================= */
+
+.articleCard__content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    padding:22px;
+
+}
+
+
+
+/* =========================================
+   Meta
+========================================= */
+
+.articleCard__meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.articleCard__meta span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:var(--text-light);
+
+    font-size:13px;
+
+}
+
+.articleCard__meta svg{
+
+    color:var(--primary);
+
+}
+
+
+
+/* =========================================
+   Title
+========================================= */
+
+.articleCard__content h3{
+
+    margin:0;
+
+    color:var(--text);
+
+    font-size:22px;
+
+    line-height:1.6;
+
+    font-weight:700;
+
+}
+
+
+
+/* =========================================
+   Description
+========================================= */
+
+.articleCard__content p{
+
+    margin:0;
+
+    color:var(--text-light);
+
+    line-height:1.9;
+
+    font-size:15px;
+
+}
+
+
+
+/* =========================================
+   Button
+========================================= */
+
+.articleCard .btn{
+
+    pointer-events:none;
+
+    width:fit-content;
+
+    margin-top:auto;
+
+}
+
+
+
+/* =========================================
+   Image Overlay
+========================================= */
+
+.articleCard__image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        to top,
+
+        rgba(0,0,0,.10),
+
+        transparent 60%
+
+    );
+
+    opacity:0;
+
+    transition:var(--transition);
+
+}
+
+.articleCard:hover .articleCard__image::after{
+
+    opacity:1;
+
+}
+
+
+
+/* =========================================
+   Focus
+========================================= */
+
+.articleCard:focus-within{
+
+    outline:2px solid var(--primary);
+
+    outline-offset:4px;
+
+}
+
+/* =========================================
+   Whole Card Clickable
+========================================= */
+
+.articleCard__link{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.articleCard__link:focus-visible{
+
+    outline:2px solid var(--primary);
+
+    outline-offset:5px;
+
+    border-radius:var(--radius-xl);
+
+}
+
+
+.articles__more{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:48px;
+
+}
+
+.articles__more .btn{
+
+    min-width:240px;
+
+}
+
+
+
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (min-width:768px){
+
+    .articles__grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .featuredArticle{
+
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+
+        align-items:center;
+
+    }
+
+    .featuredArticle__image{
+
+        height:100%;
+
+        aspect-ratio:auto;
+
+    }
+
+}
+
+
+
+/* =========================================
+   Desktop
+========================================= */
+
+@media (min-width:992px){
+
+    .articles__grid{
+
+        gap:32px;
+
+    }
+
+    .featuredArticle{
+
+        min-height:430px;
+
+    }
+
+    .featuredArticle__content{
+
+        padding:48px;
+
+    }
+
+    .featuredArticle__content h2{
+
+        font-size:40px;
+
+    }
+
+}
+
+
+
+/* =========================================
+   Large Desktop
+========================================= */
+
+@media (min-width:1200px){
+
+    .articles__grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+
+/* =========================================
+   Motion
+========================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    .articleCard,
+
+    .featuredArticle,
+
+    .articleCard img,
+
+    .featuredArticle img{
+
+        transition:none !important;
+
+    }
+
+}
+
+
+
+/* =========================================
+   Selection
+========================================= */
+
+.articleCard::selection,
+
+.featuredArticle::selection{
+
+    background:var(--primary-light);
+
+}
+
+
+
+/* =========================================
+   Loading Ready
+========================================= */
+
+.articleCard__image{
+
+    background:#EEF5FF;
+
+}
+
+
+
+/* =========================================
+   Future Ready
+========================================= */
+
+.articleCard{
+
+    position:relative;
+
+}
+
+.articleCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    border:1px solid rgba(30,79,168,.06);
+
+    pointer-events:none;
+
+}

@@ -1,0 +1,57 @@
+.infoCard{
+
+    position:absolute;
+
+    background:var(--white);
+
+    border: solid 3px rgb(0, 50, 177);
+
+    border-radius:var(--radius-round);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    z-index:5;
+}
+
+.infoCard__icon{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    font-size:22px;
+}
+
+.infoCard h4{
+
+    font-size:var(--fs-20);
+
+    font-weight:var(--fw-800);
+
+}
+
+.infoCard p{
+
+    font-size:var(--fs-14);
+
+    color:var(--text-light);
+
+    text-align:center;
+
+}

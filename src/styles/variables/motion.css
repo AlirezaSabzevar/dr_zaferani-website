@@ -1,0 +1,9 @@
+:root{
+
+    --transition-fast:.2s ease;
+
+    --transition:.3s ease;
+
+    --transition-slow:.5s ease;
+
+}

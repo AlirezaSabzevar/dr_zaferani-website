@@ -1,0 +1,20 @@
+:root{
+    
+    /* ========= Colors ========= */
+
+    --primary:#1E4FA8;
+    --primary-dark:#173F87;
+    --primary-light:#EAF3FF;
+
+    --secondary:#4E7AD9;
+
+    --white:#FFFFFF;
+
+    --text:#111827;
+    --text-light:#6B7280;
+
+    --border:#E5E7EB;
+
+    --background:#FFFFFF;
+    --background-light:#F8FBFF;
+}
