@@ -1,9 +1,13 @@
 .articlesPage{
 
-    padding-bottom:var(--section-space);
+    /* padding-bottom:var(--space-12); */
 
     background:#F8FBFF;
 
+}
+.container{
+    padding-top:var(--space-48);
+    padding-bottom:var(--space-48);
 }
 
 .articlesPage__grid{

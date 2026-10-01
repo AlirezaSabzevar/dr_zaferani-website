@@ -205,14 +205,26 @@
 
 
 /* =========================================
-   Featured Button
+   Featured Article Read More
 ========================================= */
 
-.featuredArticle .btn{
+.featuredArticle__readMore{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     width:fit-content;
 
+    text-decoration:none;
+
+    cursor:pointer;
+
 }
+
+
 
 /* =========================================
    Articles Grid
@@ -423,18 +435,44 @@
 
 
 /* =========================================
-   Button
+   Article Read More
 ========================================= */
 
-.articleCard .btn{
+.articleCard__readMore{
 
-    pointer-events:none;
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     width:fit-content;
 
     margin-top:auto;
 
+    text-decoration:none;
+
+    cursor:pointer;
+
+    background-color: var(--primary-light);
+
 }
+
+
+
+/* =========================================
+   Article Read More Focus
+========================================= */
+
+.articleCard__readMore:focus-visible,
+.featuredArticle__readMore:focus-visible{
+
+    outline:2px solid var(--primary);
+
+    outline-offset:4px;
+
+}
+
 
 
 
@@ -489,30 +527,6 @@
 /* =========================================
    Whole Card Clickable
 ========================================= */
-
-.articleCard__link{
-
-    display:flex;
-
-    flex-direction:column;
-
-    height:100%;
-
-    text-decoration:none;
-
-    color:inherit;
-
-}
-
-.articleCard__link:focus-visible{
-
-    outline:2px solid var(--primary);
-
-    outline-offset:5px;
-
-    border-radius:var(--radius-xl);
-
-}
 
 
 .articles__more{

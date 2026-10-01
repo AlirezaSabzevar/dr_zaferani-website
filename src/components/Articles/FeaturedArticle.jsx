@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom";
+
 import Button from "../Button/Button";
+
 import {
     CalendarIcon,
     ArrowLeftIcon,
 } from "../../icons";
+
 
 const FeaturedArticle = ({ article }) => {
 
@@ -19,6 +23,7 @@ const FeaturedArticle = ({ article }) => {
 
             </div>
 
+
             <div className="featuredArticle__content">
 
                 <span className="featuredArticle__badge">
@@ -27,17 +32,20 @@ const FeaturedArticle = ({ article }) => {
 
                 </span>
 
+
                 <h2>
 
                     {article.title}
 
                 </h2>
 
+
                 <p>
 
                     {article.excerpt}
 
                 </p>
+
 
                 <div className="featuredArticle__meta">
 
@@ -57,8 +65,12 @@ const FeaturedArticle = ({ article }) => {
 
                 </div>
 
+
                 <Button
+                    as={Link}
+                    to={`/articles/${article.slug}`}
                     endIcon={<ArrowLeftIcon />}
+                    className="featuredArticle__readMore"
                 >
 
                     مطالعه مقاله
@@ -72,5 +84,6 @@ const FeaturedArticle = ({ article }) => {
     );
 
 };
+
 
 export default FeaturedArticle;
