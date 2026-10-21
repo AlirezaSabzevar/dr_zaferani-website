@@ -19,17 +19,18 @@ const navigation = [
 
     {
         id:2,
+        title:"خدمات",
+        href:"#services",
+        icon: HeartIcon
+    },
+
+    {
+        id:3,
         title:"درباره دکتر",
         href:"#about",
         icon:UserIcon
     },
 
-    {
-        id:3,
-        title:"خدمات",
-        href:"#services",
-        icon: HeartIcon
-    },
 
     {
         id:4,

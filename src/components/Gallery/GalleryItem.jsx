@@ -1,31 +1,36 @@
+
 import "./Gallery.css";
 
 const GalleryItem = ({ item }) => {
 
-    return (
+    const API_URL = import.meta.env.VITE_API_URL;
 
+    const imageUrl = item.image
+        ? new URL(item.image, API_URL).href
+        : "";
+
+    const imageTitle = item.alt_text || "تصویر گالری";
+
+    return (
         <article className="galleryItem">
 
-            <img
-                src={item.image}
-                alt={item.title}
-                className="galleryItem__image"
-            />
+            {imageUrl && (
+                <img
+                    src={imageUrl}
+                    alt={imageTitle}
+                    className="galleryItem__image"
+                    loading="lazy"
+                />
+            )}
 
             <div className="galleryItem__overlay">
 
-                <h3>
-
-                    {item.title}
-
-                </h3>
+                <h3>{imageTitle}</h3>
 
             </div>
 
         </article>
-
     );
-
 };
 
 export default GalleryItem;

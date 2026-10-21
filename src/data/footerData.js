@@ -17,16 +17,17 @@ const footerData = {
             href:"#home"
         },
 
-        {
-            title:"درباره دکتر",
-            href:"#about"
-        },
-
+        
         {
             title:"خدمات",
             href:"#services"
         },
-
+        
+        {
+            title:"درباره دکتر",
+            href:"#about"
+        },
+        
         {
             title:"مقالات",
             href:"#articles"

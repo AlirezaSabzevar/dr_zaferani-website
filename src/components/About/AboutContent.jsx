@@ -1,5 +1,6 @@
-import aboutData from "../../data/aboutData";
+
 import { Link } from "react-router-dom";
+
 import Button from "../Button/Button";
 import SectionTitle from "../SectionTitle/SectionTitle";
 
@@ -8,135 +9,95 @@ import {
     CheckIcon,
 } from "../../icons";
 
-const AboutContent = () => {
+const AboutContent = ({ about }) => {
+
+    const specialties = [...(about.specialties || [])]
+        .sort((a, b) => a.order - b.order);
+
+    const stats = [...(about.stats || [])]
+        .sort((a, b) => a.order - b.order);
+
+    const bookingLink = about.booking_button_link || "/appointment";
+
+    const isInternalLink = bookingLink.startsWith("/");
+
+    const BookingButton = (
+        <Button
+            size="lg"
+            startIcon={<CalendarIcon size={25} />}
+        >
+            {about.booking_button_text || "رزرو نوبت مشاوره"}
+        </Button>
+    );
 
     return (
-
         <div className="about__content">
 
-            <SectionTitle 
-                badge={aboutData.badge}
-                title={aboutData.name}
-                subtitle={aboutData.specialty}
+            <SectionTitle
+                badge={about.badge_text}
+                title={about.doctor_name}
+                subtitle={about.short_bio}
             />
 
-
-            {/* Story */}
-
+            {/* Biography */}
             <div className="about__story">
 
                 <div className="about__storyLine"></div>
 
-                <p>
-
-                    {aboutData.description}
-
-                </p>
+                <p>{about.long_bio}</p>
 
             </div>
 
-            {/* Features */}
-
+            {/* Specialties */}
             <ul className="about__features">
 
-                {
+                {specialties.map((specialty) => (
+                    <li
+                        key={specialty.id}
+                        className="about__feature"
+                    >
+                        <span className="about__featureIcon">
+                            <CheckIcon />
+                        </span>
 
-                    aboutData.features.map((feature) => (
-
-                        <li
-                            key={feature}
-                            className="about__feature"
-                        >
-
-                            <span className="about__featureIcon">
-
-                                <CheckIcon />
-
-                            </span>
-
-                            <span>
-
-                                {feature}
-
-                            </span>
-
-                        </li>
-
-                    ))
-
-                }
+                        <span>{specialty.title}</span>
+                    </li>
+                ))}
 
             </ul>
 
             {/* Statistics */}
-
             <div className="about__stats">
 
-                <div className="about__stat">
-
-                    <strong>
-
-                        {aboutData.experience}
-
-                    </strong>
-
-                    <span>
-
-                        سال تجربه
-
-                    </span>
-
-                </div>
-
-                <div className="about__stat">
-
-                    <strong>
-
-                        {aboutData.patients}
-
-                    </strong>
-
-                    <span>
-
-                        عمل جراحی موفق
-
-                    </span>
-
-                </div>
-
-                <div className="about__stat">
-
-                    <strong>
-
-                        {aboutData.satisfaction}
-
-                    </strong>
-
-                    <span>
-
-                        رضایت بیماران
-
-                    </span>
-
-                </div>
+                {stats.map((stat) => (
+                    <div
+                        className="about__stat"
+                        key={stat.id}
+                    >
+                        <strong>{stat.value}</strong>
+                        <span>{stat.label}</span>
+                    </div>
+                ))}
 
             </div>
 
-            {/* CTA */}
-            <Link to="/appointment">
-                <Button
-                    size="lg"
-                    startIcon={<CalendarIcon size={25} />}
+            {/* Booking Button */}
+            {isInternalLink ? (
+                <Link to={bookingLink}>
+                    {BookingButton}
+                </Link>
+            ) : (
+                <a
+                    href={bookingLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
+                    {BookingButton}
+                </a>
+            )}
 
-                    رزرو نوبت مشاوره
-
-                </Button>
-            </Link>
         </div>
-
     );
-
 };
 
 export default AboutContent;

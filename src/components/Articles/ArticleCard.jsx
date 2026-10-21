@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import Card from "../Card/Card";
 import Button from "../Button/Button";
+import { getArticleImage } from "./articlesMedia";
 
 import {
     CalendarIcon,
@@ -18,7 +19,7 @@ const ArticleCard = ({ article }) => {
             <div className="articleCard__image">
 
                 <img
-                    src={article.image}
+                    src={getArticleImage(article.image)}
                     alt={article.title}
                 />
 

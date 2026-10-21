@@ -1,34 +1,25 @@
-import galleryData from "../../data/galleryData";
+
 import GalleryItem from "./GalleryItem";
 
-const GalleryGrid = ({ limit }) => {
+const GalleryGrid = ({ images = [], limit }) => {
 
-    const images = limit ? galleryData.slice(0, limit) : galleryData;
+    const displayedImages =
+        typeof limit === "number"
+            ? images.slice(0, limit)
+            : images;
 
     return (
-
         <div className="gallery__grid">
 
-            {
-
-                images.map((item)=>(
-
-                    <GalleryItem
-
-                        key={item.id}
-
-                        item={item}
-
-                    />
-
-                ))
-
-            }
+            {displayedImages.map((item) => (
+                <GalleryItem
+                    key={item.id}
+                    item={item}
+                />
+            ))}
 
         </div>
-
     );
-
-}
+};
 
 export default GalleryGrid;

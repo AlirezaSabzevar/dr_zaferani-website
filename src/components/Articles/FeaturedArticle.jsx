@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import Button from "../Button/Button";
+import { getArticleImage } from "./articlesMedia";
 
 import {
     CalendarIcon,
@@ -17,7 +18,7 @@ const FeaturedArticle = ({ article }) => {
             <div className="featuredArticle__image">
 
                 <img
-                    src={article.image}
+                    src={getArticleImage(article.image)}
                     alt={article.title}
                 />
 
