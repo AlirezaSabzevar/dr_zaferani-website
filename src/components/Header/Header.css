@@ -47,6 +47,8 @@
 
 .header__menuButton{
     display: flex;
+    justify-content: center;
+    align-items: center;
     width:48px;
     aspect-ratio:1;
     border:none;
